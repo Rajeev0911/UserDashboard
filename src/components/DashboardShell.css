@@ -1,0 +1,143 @@
+.shell {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 260px;
+    background: var(--white);
+    box-shadow: 2px 0 5px var(--shadow-color);
+    padding: 1.5rem;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .logo {
+    font-size: 2rem;
+  }
+  
+  .app-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  
+  .menu {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    border-radius: 8px;
+  }
+  
+  .menu-item:hover {
+    background: var(--secondary-color);
+  }
+  
+  .menu-icon {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .main {
+    flex: 1;
+    background: var(--secondary-color);
+  }
+  
+  .top-bar {
+    background: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px var(--shadow-color);
+  }
+  
+  .search-bar {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 2rem;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    padding-left: 3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .notification-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-primary);
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      left: -280px;
+      top: 0;
+      bottom: 0;
+      z-index: 100;
+    }
+  
+    .sidebar.open {
+      left: 0;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
